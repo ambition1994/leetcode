@@ -12,13 +12,11 @@ class Solution:
             return elem[1]
         intervals.sort(key=takeSecond)
         temp = intervals[0]
-        intervalsz_copy = intervals[:]
-        for index, item in enumerate(intervalsz_copy):
+        for index, item in enumerate(intervals):
             if index == 0:
                 continue
             elif (item[0] < temp[1]):
                 count += 1
-
             else:
                 temp = intervals[index]
         return count
