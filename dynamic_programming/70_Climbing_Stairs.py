@@ -1,5 +1,8 @@
 class Solution:
     def climbStairs(self, n: int) -> int:
+        # use a table-dp to save result
+        # set initialize state
+        # write transition formula in for loop
         dp = [0] * max((n + 1), 3)
         dp[0], dp[1], dp[2] = 1, 1, 2
         if n <= 2:
