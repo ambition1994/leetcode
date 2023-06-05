@@ -10,6 +10,4 @@ class Solution:
             for j in coins:
                 if j <= i:
                     dp[i] = min(dp[i], dp[i - j] + 1)
-                else:
-                    continue
         return dp[amount] if dp[amount] != float("inf") else -1
